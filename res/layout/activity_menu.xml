@@ -1,0 +1,98 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    tools:context=".MenuActivity" >
+	    
+    <ImageView
+        android:id="@+id/menuBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ocean" />
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+
+		<ImageView
+		    android:id="@+id/viewTitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="100dp"
+		    android:layout_marginTop="10dp"
+		    android:scaleType="fitCenter"
+		    android:src="@drawable/title" />
+	
+	    <ImageView
+	        android:id="@+id/viewClam"
+	        android:layout_width="match_parent"
+	        android:layout_height="80dp"
+	        android:paddingTop="10dp"
+	        android:scaleType="fitCenter"
+	        android:layout_weight="2"
+	        android:src="@drawable/clamneutral" />
+	
+	    <Button
+	        android:id="@+id/buttonStart"
+	        android:layout_width="180dp"
+	        android:layout_height="50dp"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginTop="5dp"
+	        android:layout_weight="1"
+	        android:onClick="startListener"
+	        android:background="@drawable/start_button_selector"
+	        android:scaleType="fitXY"/>
+		
+		<Button
+	        android:id="@+id/buttonExit"
+	        android:layout_width="180dp"
+	        android:layout_height="50dp"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginTop="10dp"
+	        android:layout_weight="1"
+	        android:onClick="exitListener"
+	        android:background="@drawable/exit_button_selector"
+	        android:scaleType="fitXY" />
+	
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp" >
+	
+	        <Button
+	            android:id="@+id/buttonSFX"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="20dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignParentTop="true"
+	            android:background="@drawable/sound_on"
+	            android:onClick="onTouchSound" />
+
+	        <Button
+	            android:id="@+id/buttonMute"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="20dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentTop="true"
+	            android:layout_marginRight="10dp"
+	            android:layout_toLeftOf="@+id/buttonSFX"
+	            android:background="@drawable/music_on"
+	            android:onClick="onTouchMusic" />
+
+	        <TextView
+	            android:id="@+id/creditText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="5dp"
+	            android:text="&quot;Beach Party&quot; Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 3.0"
+	            android:textSize="8sp" />
+
+	    </RelativeLayout>
+	
+	</LinearLayout>
+
+</RelativeLayout>
